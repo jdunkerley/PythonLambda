@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Publish Lambda",
+        "command": "zip lambda.zip lambda.py && aws lambda update-function-code --function-name PythonLambda --zip-file fileb://lambda.zip && rm lambda.zip",
+        "type": "shell",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }
